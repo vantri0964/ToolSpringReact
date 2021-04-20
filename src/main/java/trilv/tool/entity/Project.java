@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -16,7 +18,10 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "{projectName.notBlank}")
     private String projectName;
+    @NotBlank(message = "{projectIdentifier.notBlank}")
+    @Size(min = 4, max = 5, message = "{projectIdentifier.length}")
     private String projectIdentifier;
     private String description;
     private Date start_date;
