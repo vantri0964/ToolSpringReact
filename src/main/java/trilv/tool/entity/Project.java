@@ -2,6 +2,7 @@ package trilv.tool.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +23,7 @@ public class Project {
     private String projectName;
     @NotBlank(message = "{projectIdentifier.notBlank}")
     @Size(min = 4, max = 5, message = "{projectIdentifier.length}")
+    @Column(updatable = false, unique = true)
     private String projectIdentifier;
     private String description;
     private Date start_date;
