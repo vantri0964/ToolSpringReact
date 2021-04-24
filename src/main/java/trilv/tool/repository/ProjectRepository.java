@@ -7,5 +7,5 @@ import trilv.tool.entity.Project;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long>{
-
+    Project findByProjectIdentifier(String id);
 }
