@@ -14,7 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ToolFullStack</name>
 	<packaging>war</packaging>
-	<description>Tool study fullstack</description>
+	<description>Tool study fullstack </description>
 	<properties>
 		<java.version>1.8</java.version>
 		<start-class>trilv.tool.ToolFullStackApplication</start-class>
